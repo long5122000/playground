@@ -33,16 +33,5 @@
     &__list {
       flex-wrap: wrap;
     }
-    &__item {
-      width: calc(50% - 1rem);
-      margin-bottom: 1rem;
-    }
-  }
-}
-@media screen and (min-width: 568px) and (max-width: 737px) {
-  .connect {
-    &__item {
-      width: calc(25% - 22.5px);
-    }
   }
 }
