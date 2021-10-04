@@ -1,0 +1,55 @@
+.menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 300px;
+  background-color: white;
+  z-index: 99999;
+  box-shadow: rgba(100, 100, 11, 0.2) 0px 7px 29px 0px;
+  transform: translateX(100%);
+  transition: transform 0.2s linear;
+  will-change: transform;
+  &.is-active {
+    transform: translateX(0);
+  }
+  &-list {
+    list-style: none;
+    height: 100%;
+    padding: 70px 20px 20px;
+  }
+  &-item {
+    margin-bottom: 15px;
+  }
+  &-link {
+    display: block;
+    padding: 1.5rem;
+    text-transform: capitalize;
+    color: $gray;
+    border-radius: 6px;
+    transition: all 0.15s linear;
+    font-size: 1.8rem;
+    &:hover {
+      color: white;
+      background-color: $primary-color;
+    }
+  }
+  &-close {
+    cursor: pointer;
+    font-size: 4rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  &-phone {
+    padding: 15px;
+    color: $gray;
+    a {
+      color: inherit;
+      font-weight: bold;
+    }
+  }
+  &-toggle {
+    cursor: pointer;
+  }
+}

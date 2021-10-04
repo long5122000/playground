@@ -1,0 +1,49 @@
+.banner {
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  text-align: center;
+  &__heading {
+    font-weight: 600;
+    font-size: 6rem;
+    margin-bottom: 2rem;
+  }
+  &__desc {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 4rem;
+  }
+  &__buttons {
+    @include flex(stretch, center);
+    .btn {
+      margin: 0 1rem;
+    }
+  }
+}
+@include maxw(1023px) {
+  .banner {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    &__heading {
+      font-size: 4rem;
+      margin-bottom: 2rem;
+    }
+    &__desc {
+      font-size: 1.6rem;
+    }
+    &__buttons > .btn {
+      font-size: 1.4rem;
+    }
+  }
+}
+@include maxw(479px) {
+  .banner {
+    &__heading {
+      font-size: 3rem;
+    }
+    &__buttons > .btn {
+      font-size: 1.2rem;
+    }
+  }
+}

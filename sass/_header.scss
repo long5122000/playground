@@ -1,0 +1,56 @@
+.header {
+  padding-top: 4rem;
+  &__inner {
+    @include flex(center, space-between);
+  }
+  &__menu {
+    &-list {
+      @include flex(center);
+      list-style: none;
+    }
+    &-item {
+      margin-left: 5rem;
+      &:last-child {
+        margin-left: 7rem;
+      }
+    }
+    &-link {
+      font-size: 1.6rem;
+      color: $text-color;
+      transition: color 0.25s linear, border 0.25s linear;
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
+.logo {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: $text-color;
+  &__text {
+    color: $primary-color;
+  }
+}
+.menu-toggle {
+  display: none;
+}
+@include maxw(1023px) {
+  .menu-toggle {
+    display: block;
+  }
+}
+@media screen and (min-width: 568px) and (max-width: 897px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+  }
+}
+@include maxw(767px) {
+  .header {
+    &__menu {
+      display: none;
+    }
+  }
+}
